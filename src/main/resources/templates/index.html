@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/img/logoSo.png}">
+    <title>Home</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.0.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/fontawesome-5.15.3/css/all.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+
+</head>
+
+<body>
+
+    <!--SIDEBAR-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a th:href="@{/}" class="active">Home</a>
+        <a th:href="@{/galeria/galeria}">Galeria</a>
+        <a th:href="@{/pesquisa/popArt}">Pop Art</a>
+        <a th:href="@{/pesquisa/arteUrbana}">Arte Urbana</a>
+        <a th:href="@{/galeria/cadastro}">Cadastro</a>
+        <a th:href="@{/sobre}">Sobre</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <!--TEXTO-->
+    <div id="texto">
+        <h2><strong>SA Semana da Arte</strong></h2>
+
+        <p>A semana da Arte, como é chamada, foi uma iniciativa da escola SESI SENAI CTAI para incentivar os alunos a
+            exercitarem a arte e terem um trabalho mais dinâmico e diferente para fazerem, além de claro,
+            expandir os conhecimentos sobre os diferentes tipos de arte. 🎨</p>
+        <p>O nosso Site tem o intuito de mostrar a quem o visita, informações, tanto sobre a pop art,
+            quanto sobre a arte urbana, além de um espaço para você poder expor sua arte,
+            que chamamos de galeria. 🖼️</p>
+        <p>Você terá total liberdade para poder pôr sua arte lá 👨‍🎨, pondo seu nome, o nome de sua obra,
+            e uma breve descrição, para que todos que olhem a galeria,
+            possam desfrutar da sua arte da melhor forma.</p>
+        <p>Além de tudo isso, ao final você ainda poderá saber mais sobre o nosso grupo 👨‍💻,
+            sobre cada integrante e saber um pouco mais de cada um de nós. 🙂</p>
+
+    </div>
+
+    <br><br>
+
+    <!--IMAGEM-->
+    <div class="imagem"><center>
+        <img th:src="@{img/logohaha.png}" alt="Logo do grupo">
+        <p>Nossa marca.</p>
+        </center>
+    </div>
+
+    <!--RODAPE-->
+    <footer>
+        <ul>
+            <li><strong>Só Amigos Galeria</strong></li>
+            <li>Angelo - Eduardo - Lorenzo - Santiago</li>
+            <li>SESI - SENAI - CTAI</li>
+        </ul>
+    </footer>
+
+    <!--JS-->
+    <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+    <!--<script th:src="@{/js/popper.min.js}"></script>-->
+    <script th:src="@{/js/scriptIndex.js}"></script>
+    <script th:src="@{/bootstrap-5.0.1/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

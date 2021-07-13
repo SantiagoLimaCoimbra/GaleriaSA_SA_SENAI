@@ -1,0 +1,154 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: #232C33;
+  background: #5A7D7C;
+}
+
+a.active, a:hover {
+    border-left: 5px solid #31DEC3;
+    color: #232C33;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #232C33;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #628395; /*LETRA*/
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #DADFF7;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #232C33;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#texto{
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: "Lato", sans-serif;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.imagem img {
+    /*text-align: center;*/
+    max-width:300px;
+    max-height:500px;
+}
+
+
+#obra3{
+    color: #f4ff1f;
+}
+#obra1{
+    color: #ff5608;
+}
+#obra2{
+    color: #f4ff1f;
+}
+#obra4{
+    color: #161200;
+}
+
+/* - - c a r r o s s e l - - */
+
+.carousel-item img {
+    max-width:500px;
+    max-height:700px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+/* - - r o d a p é - - */
+
+footer{
+    background-color: #232C33;
+    color: #31DEC3;
+    text-align: center;
+    padding: 32px;
+    margin-top: 24px;
+    font-family: "Lato", sans-serif;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+a {
+    color: #31DEC3;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.row {
+    display: flex
+    justify-content: center;
+}
+
+.col {
+    width: 50%
+
+}
+
+@media screen and (max-width: 800px) {
+    .rodape{
+        width: 97%;
+    }
+    .row{
+        display: block;
+    }
+    .col{
+        width: 94%
+    }
+}

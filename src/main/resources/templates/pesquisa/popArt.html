@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" th:href="@{/img/logoSo.png}">
+    <title>Pop Art</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" th:href="@{/bootstrap-5.0.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/fontawesome-5.15.3/css/all.css}">
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+
+</head>
+
+<body>
+
+    <!--SIDEBAR-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/galeria/galeria}">Galeria</a>
+        <a th:href="@{/pesquisa/popArt}" class="active">Pop Art</a>
+        <a th:href="@{/pesquisa/arteUrbana}">Arte Urbana</a>
+        <a th:href="@{/galeria/cadastro}">Cadastro</a>
+        <a th:href="@{/sobre}">Sobre</a>
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <!--TEXTO-->
+    <div id="texto">
+        <h2><strong>POP ART</strong></h2>
+
+        <p>A Pop Art tem como principais características a aproximação da arte a vida cotidiana,
+            utilização de cores vibrantes, representação de marcas, estética industrial,
+            uso de imagens de celebridades e no geral tudo que envolvia a contemporaneidade e o capitalismo.</p>
+        <p>A Pop Art buscava evidenciar a crise da arte do século XX através de um retorno à arte figurativa.
+            Ela evidenciava que a arte e vida contemporânea poderiam permanecer juntas,
+            mostrando através das obras signos e símbolos tirados da cultura de massa e da vida cotidiana,
+            que por consequência aproximavam a população que se sentia representada pelo próprio mundo
+            representando na obra, tirando o receio e exclusividade que a arte erudita gerava para população.</p>
+        <p>Finalizando, a Pop Art chama muita atenção no acolhimento que ela gerou através das obras que
+            eram feitas pelos artistas pertencentes ao movimento.</p>
+    </div>
+
+    <br><br>
+
+    <!--CARROSSEL-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img th:src="@{../img/pesquisaIMG/CryingGirl.png}" class="d-block w-100" alt="Crying Girl">
+                <div id="obra1" class="carousel-caption d-none d-md-block">
+                    <h5><strong>Crying Girl</strong></h5>
+                    <p><strong>De Roy Lichtenstein</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{../img/pesquisaIMG/InTheCar.jpg}" class="d-block w-100" alt="In The Car">
+                <div id="obra2" class="carousel-caption d-none d-md-block">
+                    <h5><strong>In The Car</strong></h5>
+                    <p><strong>De Roy Lichtenstein</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{../img/pesquisaIMG/RichardHamilton.jpg}" class="d-block w-100" alt="Obra de Richard Hamilton">
+                <div id="obra3" class="carousel-caption d-none d-md-block">
+                    <h5><strong>O que Exatamente Torna os Lares de </strong></h5>
+                    <h5><strong>Hoje Tão Diferentes, Tão Atraentes?</strong></h5>
+                    <p><strong>De Richard Hamilton</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img th:src="@{../img/pesquisaIMG/MarilynMonroe.jpg}" class="d-block w-100" alt="Marilyn Monroe">
+                <div  class="carousel-caption d-none d-md-block">
+                    <h5><strong>Marilyn Monroe</strong></h5>
+                    <p><strong>De Andy Warhol</strong></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--RODAPE-->
+    <footer>
+        <ul>
+            <li><strong>Só Amigos Galeria</strong></li>
+            <li>Angelo - Eduardo - Lorenzo - Santiago</li>
+            <li>SESI - SENAI - CTAI</li>
+        </ul>
+    </footer>
+
+    <!--JS-->
+    <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+    <!--<script th:src="@{/js/popper.min.js}"></script>-->
+    <script th:src="@{/js/scriptIndex.js}"></script>
+    <script th:src="@{/bootstrap-5.0.1/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

@@ -38,6 +38,81 @@
         <p>{mais textos a serem inseridos}</p>
     </div>
 
+    <!--FORMULARIO-->
+    <div class="container form-cadastro-obra">
+
+        <form th:action="@{/cadastro/save}"
+              method="post"
+              th:object="${obra}">
+
+            <div th:if="${erro}" class="alert alert-danger">
+                <span th:text="${erroMsg}"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control"
+                       id="floatingInputId" placeholder="Código"
+                       disabled th:field="*{id}">
+                <label for="floatingInputId">Código</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="floatingInputNomeObra" placeholder="Nome da Obra de arte"
+                       th:field="*{nomeObra}" required>
+                <label for="floatingInputNome">Nome da Obra</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="floatingInputNome" placeholder="Nome do Artista"
+                       th:field="*{nomeArtista}" required>
+                <label for="floatingInputNome">Nome do Artista</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select class="form-select" id="floatingSelectStatus"
+                        aria-label="Tipo da Obra de Arte"
+                        th:field="*{status}" required >
+                    <option value="Iniciado">Arte Urbana</option>
+                    <option value="Planejado">Pop Art</option>
+                </select>
+                <label for="floatingSelectStatus">Selecione o Tipo</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="date" class="form-control"
+                       id="floatingInputDataInicio" placeholder="Data em que foi finalizada a Obra de Arte"
+                       th:field="*{dataObra}" required>
+                <label for="floatingInputDataInicio">Data da Obra</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"
+                       id="floatingInputDescricao" placeholder="Descrição da Obra"
+                       th:field="*{descricao}" required>
+                <label for="floatingInputDescricao">Descrição</label>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <a th:href="@{/funcionario/list}"
+                       class="btn btn-outline-secondary btn-form">
+                        <i class="fa fa-backspace"></i> Voltar
+                    </a>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-success btn-form"
+                            type="submit">
+                        <i class="fa fa-save"></i> Salvar
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
     <!--RODAPE-->
     <footer>
         <ul>

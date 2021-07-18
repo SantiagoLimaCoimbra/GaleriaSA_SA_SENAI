@@ -47,7 +47,7 @@
 
         <div class="col">
             <div th:each="obra : ${obras}" class="card" style="width: 25rem;">
-                <img th:src="@{/imgObras/{imagem} (imagem=${obra.imgObra})}" class="card-img-top" alt="...">
+                <!--<img th:src="@{/imgObras/{imagem} (imagem=${obra.imgObra})}" class="card-img-top" alt="...">-->
                 <div class="card-body">
                     <h5 th:text="${obra.nomeObra}" class="card-title">OBRA 1</h5>
                     <p th:text="${obra.descricao}" class="card-text">DESCRIÇÃO</p>

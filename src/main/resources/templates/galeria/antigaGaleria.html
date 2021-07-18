@@ -44,22 +44,52 @@
 
     <center>
     <div class="row row-cols-1 row-cols-md-2 g-4">
-
         <div class="col">
-            <div th:each="obra : ${obras}" class="card" style="width: 25rem;">
-                <img th:src="@{/imgObras/{imagem} (imagem=${obra.imgObra})}" class="card-img-top" alt="...">
+            <div class="card" style="width: 25rem;">
+                <img th:src="@{../img/integrantes/santiago2.png}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 th:text="${obra.nomeObra}" class="card-title">OBRA 1</h5>
-                    <p th:text="${obra.descricao}" class="card-text">DESCRIÇÃO</p>
+                    <h5 class="card-title">OBRA 1</h5>
+                    <p class="card-text">DESCRIÇÃO</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li th:text="${obra.nomeArtista}" class="list-group-item">NOME DO ARTISTA</li>
-                    <li th:text="${obra.tipo}" class="list-group-item">tipo de obra</li>
-                    <li th:text="${#dates.format(obra.dataObra, 'dd/MM/yyyy')}" class="list-group-item">data da obra</li>
+                    <li class="list-group-item">NOME DO ARTISTA</li>
+                    <li class="list-group-item">tipo de obra</li>
+                    <li class="list-group-item">data da obra</li>
                 </ul>
             </div>
         </div>
-
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img th:src="@{../img/pesquisaIMG/InTheCar.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">OBRA 2</h5>
+                    <p class="card-text">DESCRIÇÃO</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">NOME DO ARTISTA</li>
+                    <li class="list-group-item">tipo de obra</li>
+                    <li class="list-group-item">data da obra</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img th:src="@{../img/pesquisaIMG/PauloIto.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">OBRA 3</h5>
+                    <p class="card-text">DESCRIÇÃO</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 25rem;">
+                <img th:src="@{../img/pesquisaIMG/InTheCar.jpg}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">OBRA 4</h5>
+                    <p class="card-text">DESCRIÇÃO</p>
+                </div>
+            </div>
+        </div>
     </div>
     </center>
 

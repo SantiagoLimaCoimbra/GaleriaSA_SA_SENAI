@@ -42,6 +42,7 @@
     <div class="container form-cadastro-obra">
 
         <form th:action="@{/cadastro/save}"
+              enctype="multipart/form-data"
               method="post"
               th:object="${obra}">
 
@@ -73,9 +74,9 @@
             <div class="form-floating mb-3">
                 <select class="form-select" id="floatingSelectStatus"
                         aria-label="Tipo da Obra de Arte"
-                        th:field="*{status}" required >
-                    <option value="Iniciado">Arte Urbana</option>
-                    <option value="Planejado">Pop Art</option>
+                        th:field="*{tipo}" required >
+                    <option value="arteUrbana">Arte Urbana</option>
+                    <option value="popArt">Pop Art</option>
                 </select>
                 <label for="floatingSelectStatus">Selecione o Tipo</label>
             </div>
@@ -92,6 +93,10 @@
                        id="floatingInputDescricao" placeholder="Descrição da Obra"
                        th:field="*{descricao}" required>
                 <label for="floatingInputDescricao">Descrição</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="file" name="file">
             </div>
 
             <div class="row">

@@ -11,4 +11,9 @@ public class GaleriaController {
         return "/galeria/galeria";
     }
 
+     /*@GetMapping("/cargo/list")
+    public String list(Model model){
+        model.addAttribute("cargos << (OBRAS) >> ", cargoService.findAll());
+        return "cargo/list";
+    }*/
 }

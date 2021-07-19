@@ -31,6 +31,8 @@ public class ObraController {
     @PostMapping("/obra/save")
     public String save(Obra obra, Model model){
 
+        System.out.println("Teste fora do if");
+
         String msgErro = obraService.validarObra(obra);
         if(msgErro != null){
             model.addAttribute("obra", obra);
@@ -41,9 +43,11 @@ public class ObraController {
         }
 
         if(obraService.save(obra)){
+            System.out.println("Teste dentro do if redirect galeria");
             return "redirect:/galeria/galeria";
         } else {
             model.addAttribute("obra", obra);
+            System.out.println("Teste dentro do else redirect cadastro");
             return "galeria/cadastro";
         }
 

@@ -72,20 +72,20 @@
             </div>
 
             <div class="form-floating mb-3">
-                <select class="form-select" id="floatingSelectStatus"
+                <select class="form-select" id="floatingSelectTipo"
                         aria-label="Tipo da Obra de Arte"
                         th:field="*{tipo}" required >
                     <option value="arteUrbana">Arte Urbana</option>
                     <option value="popArt">Pop Art</option>
                 </select>
-                <label for="floatingSelectStatus">Selecione o Tipo</label>
+                <label for="floatingSelectTipo">Selecione o Tipo</label>
             </div>
 
             <div class="form-floating mb-3">
                 <input type="date" class="form-control"
-                       id="floatingInputDataInicio" placeholder="Data em que foi finalizada a Obra de Arte"
+                       id="floatingInputDataObra" placeholder="Data em que foi finalizada a Obra de Arte"
                        th:field="*{dataObra}" required>
-                <label for="floatingInputDataInicio">Data da Obra</label>
+                <label for="floatingInputDataObra">Data da Obra</label>
             </div>
 
             <div class="form-floating mb-3">
@@ -101,7 +101,7 @@
 
             <div class="row">
                 <div class="col">
-                    <a th:href="@{/funcionario/list}"
+                    <a th:href="@{@{/galeria/galeria}}"
                        class="btn btn-outline-secondary btn-form">
                         <i class="fa fa-backspace"></i> Voltar
                     </a>

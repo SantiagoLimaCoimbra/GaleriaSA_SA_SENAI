@@ -16,7 +16,7 @@ public class ObraServiceImple implements ObraService{
 
     @Override
     public List<Obra> findAll() {
-        return obraRepository.findAll(Sort.by("nome"));
+        return obraRepository.findAll(Sort.by("nomeObra"));
     }
 
     @Override
@@ -43,7 +43,33 @@ public class ObraServiceImple implements ObraService{
         }
     }
 
-    //validar obra
+    @Override
+    public String validarObra(Obra obra) {
+        String erro = null;
+        Obra o;
 
-    //deletar obra
+        if (obra.getId() == null) { //nova obra
+            o = obraRepository.findByNomeObra(obra.getNomeObra());
+            if (o != null) {
+                erro = "Nome da obra já existente!";
+            }
+
+        } else { //obra existente
+
+            o = obraRepository.findByIdNotAndNomeObra(obra.getId(), obra.getNomeObra());
+            if (o != null) {
+                erro = "Nome da obra já existente!";
+            }
+        }
+        return erro;
+    }
+
+    public boolean deleteById(Long id){
+        try {
+            obraRepository.deleteById(id);
+            return true;
+        } catch (Exception e){
+            return false;
+        }
+    }
 }

@@ -31,9 +31,9 @@ public class Obra {
     @NotNull
     private Date dataObra;
 
-    @Size(max=80)
+    @Size(max=150)
     @NotNull
-    private String desscricao;
+    private String descricao;
 
     //GETTERS E SETTERS
     public Long getId() {
@@ -76,12 +76,12 @@ public class Obra {
         this.dataObra = dataObra;
     }
 
-    public String getDesscricao() {
-        return desscricao;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDesscricao(String desscricao) {
-        this.desscricao = desscricao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     //TO STRING
@@ -93,6 +93,6 @@ public class Obra {
                 ", nomeArtista:" + nomeArtista +
                 ", tipo:" + tipo +
                 ", dataObra:" + dataObra +
-                ", desscricao:" + desscricao + ';';
+                ", descricao:" + descricao + ';';
     }
 }

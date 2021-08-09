@@ -1,14 +1,15 @@
 package br.com.galeriaSA.controller;
 
 import br.com.galeriaSA.model.Obra;
+import br.com.galeriaSA.repository.ObraRepository;
 import br.com.galeriaSA.service.ObraService;
 import br.com.galeriaSA.service.ObraServiceImple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
 
 @Controller
 public class ObraController {
@@ -31,8 +32,6 @@ public class ObraController {
     @PostMapping("/obra/save")
     public String save(Obra obra, Model model){
 
-        System.out.println("Teste fora do if");
-
         String msgErro = obraService.validarObra(obra);
         if(msgErro != null){
             model.addAttribute("obra", obra);
@@ -43,15 +42,14 @@ public class ObraController {
         }
 
         if(obraService.save(obra)){
-            System.out.println("Teste dentro do if redirect galeria");
             return "redirect:/galeria/galeria";
         } else {
             model.addAttribute("obra", obra);
-            System.out.println("Teste dentro do else redirect cadastro");
             return "galeria/cadastro";
         }
 
     }
+
 
     @GetMapping("/galeria/editarCadastro/{id}")
     public String edit(@PathVariable long id, Model model){

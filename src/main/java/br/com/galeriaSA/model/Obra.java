@@ -35,6 +35,7 @@ public class Obra {
     @NotNull
     private String descricao;
 
+
     //GETTERS E SETTERS
     public Long getId() {
         return id;
@@ -84,6 +85,7 @@ public class Obra {
         this.descricao = descricao;
     }
 
+
     //TO STRING
     @Override
     public String toString() {
@@ -93,6 +95,6 @@ public class Obra {
                 ", nomeArtista:" + nomeArtista +
                 ", tipo:" + tipo +
                 ", dataObra:" + dataObra +
-                ", descricao:" + descricao + ';';
+                ", descricao:" + descricao;
     }
 }

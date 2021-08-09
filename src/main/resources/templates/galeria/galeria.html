@@ -47,7 +47,7 @@
 
         <div class="col">
             <div th:each="obra : ${obras}" class="card" style="width: 25rem;">
-                <!--<img th:src="@{/imgObras/{imagem} (imagem=${obra.imgObra})}" class="card-img-top" alt="...">-->
+                <!--<img th:src="@{/galeria/galeria/mostrarImagem{imagem} (imagem=${obra.nomeImagem})}" class="card-img-top" alt="...">-->
                 <div class="card-body">
                     <h5 th:text="${obra.nomeObra}" class="card-title">OBRA 1</h5>
                     <p th:text="${obra.descricao}" class="card-text">DESCRIÇÃO</p>
@@ -57,12 +57,42 @@
                     <li th:text="${obra.tipo}" class="list-group-item">tipo de obra</li>
                     <li th:text="${#dates.format(obra.dataObra, 'dd/MM/yyyy')}" class="list-group-item">data da obra</li>
                 </ul>
+                <ul>
+                    <td class="td-controle">
+                        <a th:href="@{'/galeria/editarCadastro/'+${obra.id}}" class="btn btn-outline-dark">
+                            <i class="far fa-edit"></i>
+                        </a>
+                    </td>
+                    <td class="td-controle">
+                        <a th:onclick="|showModalDeletar('obra', ${obra.id})|" class="btn btn-outline-danger">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </ul>
             </div>
         </div>
 
     </div>
-    </center>
+    </center><br><br>
 
+    <!--MODAL DELETAR-->
+    <div class="modal" tabindex="-1" id="modalDeletar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-color">
+                    <h5 class="modal-title">Aviso !</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Você deseja deletar esta obra?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-outline-danger" th:onclick="deletar()">Deletar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--RODAPE-->
     <footer>
@@ -76,6 +106,7 @@
     <!--JS-->
     <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
     <!--<script th:src="@{/js/popper.min.js}"></script>-->
+    <script th:src="@{/js/scriptDeletar.js}"></script>
     <script th:src="@{/js/scriptIndex.js}"></script>
     <script th:src="@{/bootstrap-5.0.1/js/bootstrap.min.js}"></script>
 

@@ -93,6 +93,10 @@ a.active, a:hover {
     color: #161200;
 }
 
+.card {
+    /*padding 50px;*/
+}
+
 /* - - c a r r o s s e l - - */
 
 .carousel-item img {

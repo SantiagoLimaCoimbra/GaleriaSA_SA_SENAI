@@ -68,6 +68,11 @@ a.active, a:hover {
     font-family: "Lato", sans-serif;
 }
 
+.formulario {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
@@ -94,7 +99,8 @@ a.active, a:hover {
 }
 
 .card {
-    /*padding 50px;*/
+    margin-top: 24px;
+    padding: 32px;
 }
 
 /* - - c a r r o s s e l - - */
@@ -142,7 +148,6 @@ a {
 
 .col {
     width: 50%
-
 }
 
 @media screen and (max-width: 800px) {

@@ -33,12 +33,16 @@
 
     <!--TEXTO-->
     <div id="texto">
-        <h2><strong>Galeria de Arte</strong></h2>
+        <h2><strong>GALERIA DE ARTE</strong></h2>
+
+        <br><br>
 
         <p>Esta é a parte da Galeria do nosso site, aqui, através do cadastro,
             várias pessoas poderão adicionar suas artes, e bota-las em exposição para todos verem. 🖼️</p>
         <p>Todo tipo de obra é aceita, então, usufrua da melhor maneira, e aproveite a exposição! 🥰</p>
     </div>
+
+    <br><br>
 
     <!--GALERIA-->
 
@@ -49,7 +53,7 @@
             <div th:each="obra : ${obras}" class="card" style="width: 25rem;">
                 <!--<img th:src="@{/galeria/galeria/mostrarImagem{imagem} (imagem=${obra.nomeImagem})}" class="card-img-top" alt="...">-->
                 <div class="card-body">
-                    <h5 th:text="${obra.nomeObra}" class="card-title">OBRA 1</h5>
+                    <h5 th:text="${obra.nomeObra}" class="card-title">NOME OBRA</h5>
                     <p th:text="${obra.descricao}" class="card-text">DESCRIÇÃO</p>
                 </div>
                 <ul class="list-group list-group-flush">
@@ -73,7 +77,7 @@
         </div>
 
     </div>
-    </center><br><br>
+    </center>
 
     <!--MODAL DELETAR-->
     <div class="modal" tabindex="-1" id="modalDeletar">

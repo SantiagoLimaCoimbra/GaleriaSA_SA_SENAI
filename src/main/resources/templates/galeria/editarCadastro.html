@@ -43,7 +43,7 @@
 
         <!--enctype="multipart/form-data"-->
 
-        <form class="formulario" th:action="@{/obra/edit}"
+        <form class="formulario" th:action="@{/obra/save}"
               method="post"
               th:object="${obra}">
 
@@ -54,7 +54,7 @@
             <div class="form-floating mb-3">
                 <input type="number" class="form-control"
                        id="floatingInputId" placeholder="Código"
-                       disabled th:field="${obra.id}">
+                       readonly th:field="${obra.id}">
                 <label for="floatingInputId">Código</label>
             </div>
 

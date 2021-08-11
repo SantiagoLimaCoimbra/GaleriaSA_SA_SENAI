@@ -144,13 +144,10 @@ a {
 .row {
     display: flex
     justify-content: center;
-    width: 60%;
 }
 
 .col {
-
-    display: flex;
-    width: 100%;
+    width: 50%
 }
 
 @media screen and (max-width: 800px) {

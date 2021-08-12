@@ -6,7 +6,8 @@ body {
 
 a.active, a:hover {
     border-left: 5px solid #31DEC3;
-    color: #232C33;
+    color: #31DEC3;
+    /*color: #232C33;*/
 }
 
 .sidebar {
@@ -33,6 +34,7 @@ a.active, a:hover {
 
 .sidebar a:hover {
   color: #DADFF7;
+  /*color: #31DEC3;*/
 }
 
 .sidebar .closebtn {
@@ -48,6 +50,7 @@ a.active, a:hover {
   cursor: pointer;
   background-color: #232C33;
   color: white;
+  /*color: #31DEC3;*/
   padding: 10px 15px;
   border: none;
 }
@@ -142,15 +145,15 @@ a {
 }
 
 .row {
-    display: flex
+    /*display: flex;
     justify-content: center;
-    width: 60%;
+    width: 50%;
+    @include row-cols(2);*/
 }
 
 .col {
+    /*width: 20%;*/
 
-    display: flex;
-    width: 100%;
 }
 
 @media screen and (max-width: 800px) {
